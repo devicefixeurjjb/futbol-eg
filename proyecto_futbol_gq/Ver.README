@@ -1,0 +1,89 @@
+# ⚽ Fútbol Guinea Ecuatorial - Plataforma en Tiempo Real
+
+![GitHub](https://img.shields.io/github/license/tu-usuario/futbol-eg)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue)
+![Python](https://img.shields.io/badge/Python-3.11+-yellow)
+![Docker](https://img.shields.io/badge/Docker-✅-lightblue)
+
+Plataforma avanzada para visualización y publicación en tiempo real de resultados de fútbol de Guinea Ecuatorial y África.
+
+## 🌟 Características
+
+### 🎯 **Principales**
+- ✅ Resultados en tiempo real con WebSockets
+- ✅ Estadísticas avanzadas de partidos
+- ✅ Cobertura completa de todas las divisiones
+- ✅ Optimizado para conexiones móviles en África
+- ✅ Panel de administración en tiempo real
+
+### 📱 **Tecnologías**
+- **Frontend**: Next.js 14 (App Router) + TypeScript + Tailwind CSS
+- **Backend**: FastAPI + Python + PostgreSQL + Redis
+- **Tiempo Real**: Socket.IO + WebSockets
+- **Infraestructura**: Docker + Kubernetes + Cloudflare
+- **Monitoreo**: Prometheus + Grafana
+
+## 🚀 Comenzar
+
+### **Requisitos Previos**
+- Node.js 18+
+- Python 3.11+
+- Docker y Docker Compose
+- pnpm (recomendado) o npm/yarn
+
+### **Instalación Rápida**
+
+```bash
+# 1. Clonar repositorio
+git clone https://github.com/tu-usuario/futbol-eg.git
+cd futbol-eg
+
+# 2. Instalar dependencias
+pnpm install
+
+# 3. Configurar entorno
+cp .env.example .env.local
+# Edita .env.local con tus configuraciones
+
+# 4. Iniciar servicios con Docker
+pnpm docker:up
+
+# 5. Iniciar aplicación en modo desarrollo
+pnpm dev
+
+
+futbol-eg/
+├── apps/                    # Aplicaciones principales
+│   ├── web/                # Frontend Next.js
+│   ├── api/                # Backend FastAPI
+│   └── socket-server/      # Servidor WebSockets
+├── packages/               # Paquetes compartidos
+│   ├── shared/            # Código compartido
+│   ├── ui/                # Componentes UI
+│   └── database/          # Modelos y migraciones
+├── infrastructure/         # Infraestructura
+├── docs/                  # Documentación
+└── scripts/               # Scripts de utilidad
+
+
+
+
+# Desarrollo
+pnpm dev                    # Iniciar todo en desarrollo
+pnpm build                  # Construir para producción
+pnpm start                  # Iniciar en producción
+
+# Base de datos
+pnpm db:push               # Ejecutar migraciones
+pnpm db:studio             # Abrir Prisma Studio
+
+# Docker
+pnpm docker:up             # Iniciar servicios
+pnpm docker:down           # Detener servicios
+pnpm docker:logs           # Ver logs
+
+# Utilidades
+pnpm lint                  # Linter
+pnpm format                # Formatear código
+pnpm test                  # Ejecutar tests

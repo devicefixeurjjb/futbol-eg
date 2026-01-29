@@ -1,0 +1,52 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+__pycache__/
+*.pyc
+.python-version
+venv/
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Builds
+dist/
+build/
+.next/
+out/
+.nuxt/
+
+# Base de datos
+*.db
+*.sqlite
+dump.rdb
+data/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Docker
+.dockerignore
+
+# Sistema
+Thumbs.db

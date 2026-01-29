@@ -1,0 +1,46 @@
+{
+  "name": "futbol-eg-platform",
+  "version": "1.0.0",
+  "description": "Plataforma en tiempo real de fútbol de Guinea Ecuatorial",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo start",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "db:push": "turbo db:push",
+    "db:studio": "turbo db:studio",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,py}\"",
+    "test": "turbo test",
+    "type-check": "turbo type-check"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.16",
+    "prettier": "^3.0.0",
+    "typescript": "^5.2.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "keywords": [
+    "futbol",
+    "guinea-ecuatorial",
+    "deportes",
+    "tiempo-real",
+    "africa"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

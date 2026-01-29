@@ -1,0 +1,32 @@
+# Socket Server Dockerfile
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install dependencies
+COPY apps/socket-server/package*.json ./
+RUN npm install --production
+
+# Copy application code
+COPY apps/socket-server/ ./
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs \
+    && adduser -S socketuser -u 1001
+
+# Switch to non-root user
+USER socketuser
+
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=8001
+
+# Expose port
+EXPOSE 8001
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD node -e "const http = require('http'); const req = http.request({host: 'localhost', port: 8001, path: '/health', timeout: 2000}, (r) => {process.exit(r.statusCode === 200 ? 0 : 1)}); req.on('error', () => {process.exit(1)}); req.end()"
+
+# Start the application
+CMD ["node", "index.js"]
